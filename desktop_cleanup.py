@@ -7,8 +7,11 @@ print(present_date_time)
 
 
 # Source from where the files need to be copied to the destination
-source="C:\Users\Sukanya\Desktop\desktop"
-destination="C:\Users\Sukanya\Desktop\destination"
+source="C:\Users\xxxx\Desktop\"
+destination_text="C:\text_files"
+destination_word="C:\word_files"
+destination_excel="C:\excel_files"
+destination_image="C:\image_files"
 
 #  To fetch the input from the user
 # source=raw_input("Enter the source from where the files need to be moved")
@@ -46,7 +49,7 @@ def text_files():
 #######################################################################################
      if (present_date_time == fmodified_time):
          for key in my_dict.keys():
-             src_Dest=shutil.move(key,destination)
+             src_Dest=shutil.move(key,destination_text)
              print("moved")
      else:
          print("Stay there")
@@ -71,7 +74,7 @@ def word_files():
                 # print(my_dict)
      if (present_date_time == fmodified_time):
          for key in my_dict.keys():
-             src_Dest=shutil.move(key,destination)
+             src_Dest=shutil.move(key,destination_word)
          print("moved")
      else:
          print("Files have been moved already")
@@ -94,7 +97,7 @@ def excel_files():
                  #print(my_dict)
      if (present_date_time == fmodified_time):
          for key in my_dict.keys():
-             src_Dest=shutil.move(key,destination)
+             src_Dest=shutil.move(key,destination_excel)
          print("moved")
      else:
          print("Files have already been moved")
@@ -117,7 +120,7 @@ def image_files():
                  print(my_dict)
      if (present_date_time == fmodified_time):
          for key in my_dict.keys():
-             src_Dest=shutil.move(key,destination)
+             src_Dest=shutil.move(key,destination_images)
          print("moved")
      else:
          print("Files have been already moved already")
